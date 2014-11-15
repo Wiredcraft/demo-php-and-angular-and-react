@@ -1,0 +1,1 @@
+var module=angular.module("App",["ngSanitize"]);module.directive("appSubmit",["$log","$http",function(t,n){return{template:'<button ng-click="submit()" class="btn btn-primary">Submit</button>',link:function(t,u,i){t.submit=function(){n.post(i.url,{form:t.formData}).success(function(n){t.result=JSON.stringify(n)})}}}}]);
