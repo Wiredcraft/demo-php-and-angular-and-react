@@ -14,6 +14,8 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$app->mount('/rest', new App\Controller\Rest());
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
