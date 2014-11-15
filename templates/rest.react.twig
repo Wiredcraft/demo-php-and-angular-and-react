@@ -1,0 +1,19 @@
+{% extends "layout.react.twig" %}
+
+{% form_theme form 'form.react.twig' %}
+
+{% block content %}
+{% spaceless %}
+    <form>
+        <fieldset>
+            {% for field in form %}
+                <div class="form-group">
+                    {{ form_row(field) }}
+                </div>
+            {% endfor %}
+            <div class="form-group" id="submit"></div><script>App.render('submit', 'Submit')</script>
+            <div class="form-group" id="result"></div><script>App.render('result', 'Result')</script>
+        </fieldset>
+    </form>
+{% endspaceless %}
+{% endblock %}

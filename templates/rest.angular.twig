@@ -1,0 +1,22 @@
+{% extends "layout.angular.twig" %}
+
+{% form_theme form 'form.angular.twig' %}
+
+{% block content %}
+{% spaceless %}
+    <form>
+        <fieldset>
+            {% for field in form %}
+                <div class="form-group">
+                    {{ form_row(field, {
+                        'ngModel': ['formData'],
+                        'attr': {'class': 'form-control'}
+                    }) }}
+                </div>
+            {% endfor %}
+            <div class="form-group" app-submit url="{{ path('rest') }}"></div>
+            <pre class="form-group" ng-bind-html="result"></pre>
+        </fieldset>
+    </form>
+{% endspaceless %}
+{% endblock %}

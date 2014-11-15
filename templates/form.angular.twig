@@ -1,0 +1,23 @@
+{# @see Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig #}
+
+{% extends 'form_div_layout.html.twig' %}
+
+{% block form_rows -%}
+    {%- if ngModel is defined -%}
+        {%- set ngModel = ngModel|merge([name]) -%}
+        {# Pass ngModel to each row #}
+        {%- for child in form -%}
+            {{- form_row(child, {'ngModel': ngModel}) -}}
+        {%- endfor -%}
+    {%- else -%}
+        {{- parent() -}}
+    {%- endif -%}
+{%- endblock form_rows %}
+
+{% block widget_attributes -%}
+    {%- if ngModel is defined -%}
+        {%- set ngModel = ngModel|merge([name]) -%}
+        {%- set attr = attr|merge({'ng-model': (ngModel|join('.'))}) -%}
+    {%- endif -%}
+    {{- parent() -}}
+{%- endblock widget_attributes %}

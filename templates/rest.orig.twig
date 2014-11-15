@@ -1,0 +1,20 @@
+{% extends "layout.orig.twig" %}
+
+{% block content %}
+{% spaceless %}
+    <form>
+        <fieldset>
+            {% for field in form %}
+                <div class="form-group">
+                    {{ form_row(field, {
+                        'attr': {'class': 'form-control'}
+                    }) }}
+                </div>
+            {% endfor %}
+            <div class="form-group">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+{% endspaceless %}
+{% endblock %}

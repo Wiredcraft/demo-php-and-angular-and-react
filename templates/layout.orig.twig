@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title '' %} - My Silex Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ app.request.basepath }}/css/vendor.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <h3>Demo with no JS</h3>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

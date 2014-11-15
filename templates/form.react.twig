@@ -1,0 +1,36 @@
+{# @see Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig #}
+
+{% extends 'form_div_layout.html.twig' %}
+
+{# {% block form_widget_simple -%}
+    {% set type = type|default('text') -%}
+    <div id="container-{{ id }}"></div>
+    <script>App.render('container-{{ id }}', 'Input', {
+        'type': '{{ type }}',
+        'id': '{{ id }}',
+        'name': '{{ name }}',
+        className: 'form-control'
+    })</script>
+{%- endblock form_widget_simple %} #}
+
+{% block form_widget_simple -%}
+    {% set type = type|default('text') -%}
+    {{ render_react('', {
+        component: 'Input',
+        type: type,
+        id: id,
+        name: name,
+        className: 'form-control'
+    }) }}
+{%- endblock form_widget_simple %}
+
+{% block textarea_widget -%}
+    {% set type = type|default('textarea') -%}
+    <div id="container-{{ id }}"></div>
+    <script>App.render('container-{{ id }}', 'Input', {
+        'type': '{{ type }}',
+        'id': '{{ id }}',
+        'name': '{{ name }}',
+        className: 'form-control'
+    })</script>
+{%- endblock textarea_widget %}
