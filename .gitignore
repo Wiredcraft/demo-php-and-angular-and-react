@@ -1,2 +1,12 @@
+.*
+!.gitignore
+!.jshintrc
+!.bowerrc
+*.orig
+*.php~
+
+/node_modules
+/assets/vendor
+
 /vendor/
 composer.lock
