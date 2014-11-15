@@ -1,9 +1,11 @@
 {
-    "name": "fabpot/silex-skeleton",
+    "name": "demo-php-and-angular-and-react",
     "description": "A pre-configured skeleton for the Silex microframework",
     "license": "MIT",
     "type": "project",
     "require": {
+        "guzzle/guzzle": "~3.9",
+        "guzzle/silex-provider": "~1.0",
         "php": ">=5.3.3",
         "silex/silex": "~1.0",
         "silex/web-profiler": "~1.0",

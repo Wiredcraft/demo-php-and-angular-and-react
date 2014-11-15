@@ -1,0 +1,36 @@
+{
+  "name": "demo-php-and-angular-and-react",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "author": {
+    "name": "Wiredcraft",
+    "email": "info@wiredcraft.com",
+    "url": "http://wiredcraft.com"
+  },
+  "contributors": [],
+  "keywords": [],
+  "repository": {},
+  "bugs": {},
+  "homepage": "",
+  "dependencies": {
+    "flux": "2.0.1",
+    "keymirror": "0.1.0",
+    "object-assign": "1.0.0",
+    "react": "0.12.0",
+    "xhr": "1.17.0"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-jshint": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "jshint-stylish": "latest",
+    "reactify": "latest",
+    "vinyl-transform": "latest"
+  },
+  "scripts": {}
+}
